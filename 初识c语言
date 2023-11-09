@@ -1,0 +1,386 @@
+//全局变量和局部变量名字一样时，局部变量优先 
+//一个字符串的长度
+//注册一个技术博客，可以是csdn，简书，51CTO等技术博客网站。
+//字符串的结束标志是\0
+//#include <stdio.h>
+//Max(int x,int y)
+//{
+//	if (x>y)
+//	   return x;
+//	else 
+//	   return y;
+//}
+//int main()
+//{
+//	//字符串的结束标志：'\0'
+//	//"abcdef\0"
+//	//EOF是end of file 文件结束标志  值为-1
+//	//数组的下标是从0开始的
+//	int num1=10;
+//	int num2=20;
+//	int max=0;
+//	数组的大小得由常量来规定 
+////	if (num1>num2)
+////	 printf("较大值是：%d",num1);
+////	 else
+////	 printf("较大值是：%d",num2); 
+//     max=Max(num1,num2);
+//     printf("max=%d\n",max);
+//
+//	return 0;
+	//'\0'转义字符
+	//0  数字0
+	//'0' ASCII为48
+	 
+//	 #include <stdio.h>
+//	 int main()
+//	 {
+//	 	int a=10;
+//	 	int arr[]={1,2,3,4,5,6};//6*4=24 --->int[6]
+//		 printf("%d\n",sizeof(a));//4
+//		 printf("%d\n",sizeof(int));//4 
+//	 	printf("%d\n",sizeof(arr));//计算数组大小，单位是字节 
+//	 	printf("%d\n",sizeof(arr)/sizeof(arr[0]));
+//	 	return 0;
+//	 }
+
+//int main()
+//{
+//	int a=0;//整形占用4个字节，32个比特位 
+//	int b=~a;//波浪号叫做按位取反（二进制位）比如：1010就会变成0101
+//	//负数在内存中存储的时候，存储的是二进制的补码。
+//	//b是有符号的整形， 
+//	printf("%d\n",b);//使用的，打印的是这个数的原码
+//	//原码，反码，补码 
+//	//负数在内存中存储的时候，存储的是二进制的补码。
+//	//1111111111111111111111111111111
+//	//1111111111111111111111111111110
+//	//1000000000000000000000000000001//第一个1是负号 
+//	
+//	
+//	
+//	return 0;
+//}
+//#include <stdio.h>
+//int main()
+//{
+//	 int num1=10;
+//	 int num2=20;
+//	 if(num1>num2)
+//	    printf("较大值为%d\n",num1);
+//	    else
+//	    printf("较大值为%d\n",num2);
+//	
+//	
+//	return 0;
+// } 
+// 
+// #include <stdio.h>
+//int MAX(int x,int y){
+// 	if(x>y)
+// 	  return x;
+// 	  else
+// 	  return y;
+// }
+// 
+// int main()
+// {
+// 	int num1=100;
+// 	int num2=10;
+// 	int max=0;
+// 	
+// 	max=MAX(num1,num2);
+// 	printf("max=%d\n",max); 	
+// 	return 0;
+// }
+ 
+
+
+
+
+
+// #include <stdio.h>
+// int main()
+// {
+// 	int a=10;
+//	 int arr[]={1,2,3,4,5,6}; //字节数=6*4=24 ，元素的类型是int,数组的类型是arr  sizeof:操作数的类型长度（以字节为单位） 
+// 	printf("%d\n",sizeof(a));//4
+// 	printf("%d\n",sizeof(int));//4
+// 	printf("%d\n",sizeof a);//4
+//	//printf("%d\n",sizeof int);//error
+//	printf("%d\n",sizeof(arr));//计算数组大小，单位是字节
+//	printf("%d\n",sizeof(arr)/sizeof(arr[0]));
+// 	return 0;
+// }
+ 
+ 
+ 
+ //~  对一个数的二进制按位取反    整型占用4个字节，32bit位     0是正号，1是负号   
+ //例如：1010   
+ //按位取反：0101  
+ //00000000000000000000000000000000                （32个0）按位取反之后 
+ //11111111111111111111111111111111   
+ //原码变反码：符号位不变，其他位按位取反 
+ //反码变补码：反码加一，得到补码       补码减一得到反码       
+ //原码，反码，补码是计算过程中的一种数字 
+ // 只要是整数，内存中存储的都是二进制的补码
+ //对于正数来说，原码，反码，补码相同
+ //负数的话，存储的是补码，
+ //原码直接按照正负写出的二进制序列，反码是原码的符号位不变，其他位按位取反，补码是反码加一得到的 
+ //11111111111111111111111111111111    补码 
+ //11111111111111111111111111111110   反码 
+ //10000000000000000000000000000001    原码       因此下方程序的运行结果是负一 
+ //负数在内存中存储时，存储的是二进制的补码
+  
+// #include <stdio.h>
+// int main()
+// {
+// 	int a=0;
+// 	int b=~a;  //b是有符号的整形      二进制里面的最高位表示的是符号位  0是正数，1是负数 
+// 	printf("%d\n",b);  //使用的打印的是这个数的原码 
+// 	
+// 	return 0;
+//  } 
+// 
+ 
+ //++和-- 
+// #include <stdio.h>
+// int main()
+// {
+// 	int a=10;
+// 	int b=a++;//++在此处为后置++,使用方式先b使用a的原值,然后a再变为a加一 
+// 	printf("a=%d b=%d\n",a,b);//打印后a=11,b=10 
+// 	//如果int b=++a;为前置++,即为a=11,b=11
+// 	//如果是int b=a--,则输出结果为a=9,b=10
+//	//如果是int b=--a,则输出结果为a=9,b=9 
+//	  
+// 	return 0;
+//  } 
+  
+  
+// *  间接访问操作符（解引用操作符)
+// (类型) 强制类型转换   括号里面放一个类型 
+// #include <stdio.h>
+// int main()
+// {
+// 	int a=(int)3.14;//原来的3.14是double类型 
+// 	return 0;
+//  } 
+ 
+//！=用于测试“不相等”   ==测试“相等” 
+ //&&逻辑与 
+ //||逻辑或 
+ 
+ //0表示假，非0就是真 
+// #include <stdio.h>
+// int main() 
+// 
+// {
+// 	int a=3;
+//	 int b=5;
+//	 int c=a&&b;
+//	 printf("c=%d\n",c) ;
+// 	return 0;
+// }
+ 
+ //条件操作符  exp1？exp2：exp3   如果表达式1的值是正确的，则表达式2执行，如果表达式1的值是错误的，则表达式3执行，也叫三目操作符 
+  
+// #include <stdio.h>
+// int main()
+// {
+// 	int a=10;
+// 	int b=20;
+// 	int max=0;
+// 	max=(a>b?a:b);
+// 	if (a>b)
+// 	  max=a;
+// 	  else
+// 	  max=b;
+// 	return 0;
+//  }
+
+
+//逗号表达式，由逗号隔开的表达式
+//下标引用，函数调用 
+//#include <stdio.h>
+//
+//int Add(int x,int y)
+//{
+//	int z=0;
+//	z=x+y;
+//    return z;
+//}
+//int main()
+//{
+////	int arr[10]={0};
+////	arr[4];//[]叫做下标引用操作符 
+//int a=10;
+//int b=10;
+//int sum=Add(a,b);//()函数调用操作符 
+//	return 0;
+// } 
+ 
+ 
+ 
+//常用关键字
+//auto break case char const continue default do double else enum extern float for goto if long reginster（寄存器关键字） return short(短整型） 
+//signed sizeof static struct（结构体关键字） switch typedef（类型定义） union（联合体或者叫做共用体） unsigned void volatile while 
+//
+ //int定义的变量是有符号的，其实int前面一般都省略signed
+ // unsigned int num=20;此unsigned就是为了定义无符号的变量 
+//int main()
+//    {
+//    	register int a=10;//把a定义成寄存器变量 
+//    	return 0； 
+//	}
+// 
+ 
+//typedef 类型定义 或者是类型同定义
+//例如：typedef unsigned int u_int的意思即为把“unsigned int"命名为“u_int” 
+
+//static 修饰局部变量
+//修饰局部变量时，局部变量的生命周期变长 
+// #include <stdio.h>
+// 
+// void test()
+// {
+// 	static int a=1;//此时a变成静态局部变量 
+// 	a++;
+// 	printf("a=%d\n",a);
+// }
+//int main()
+//{
+//	int i=0;
+//	while(i<5)
+//	{
+//		test();
+//		i++;
+//	}
+//	return 0;
+// } 
+ 
+//static修饰全局变量，改变了变量的作用域，让静态的全局变量只能在自己所在的源文件内部使用，出了源文件则无法使用 
+//static还有一个功能叫做修饰函数 ，也是改变了函数的作用域（这种说法不准确）改变了函数的链接属性，外部链接属性就会变成内部链接属性 
+//外部链接属性就会变成内部链接属性 
+//extern  声明外部符号，就可以调用别的页面代码里面的变量了也可以声明外部函数 
+//#include <stdio.h>
+//int main()
+//{
+//	int a=10;
+//	ine b=20;
+//	int sun=Add(a,b);
+//	printf("sum=%d\n",sum);
+//	return 0;
+//}
+ 
+// #define 定义标识符常量和宏 （宏带参数） 
+//标识符常量 
+//#include <stdio.h>
+//#define MAX 100
+//int main(0)
+//{
+//	int a=MAX;
+//	return 0;
+//} 
+//#include <stdio.h>
+////函数的实现 
+//int MAX（int x,int y)
+//{
+//	if (x>y)
+//	return x;
+//	else
+//	return y;
+// } 
+ //宏的定义方式 
+//  #define MAX(X,Y) (X>Y?X:Y)
+  
+//int main()
+//{
+//	int a=10;
+//	int b=20;
+//	//函数的方式 
+//	int max=MAX(a,b);
+//	printf("max=%d\n",max);
+//	//宏的方式
+//	max=MAX(a,b);
+//	//MAX=(a>b?a:b);
+//	printf("max=%d\n",max); 
+//	return 0;
+// } 
+ 
+ 
+ //指针 
+// // 指针大小在32位平台是4个字节，在64位平台是8个字节 
+// #include<stdio.h> 
+// int main()
+// {
+// 	int a=10;//如果要申请4个字节
+//	 int * p=&a;//取地址
+//	 printf("%p\n",&a);
+//	 printf("%p\n",p);
+//	 *p=20;//*是解引用操作符，对p进行解引用操作，将值会从10修改成20 
+//	 //有一种变量是用来存放地址的，这种变量就叫做指针变量 
+//	 //printf("%p\n",&a);
+// 	return 0;
+// }
+ 
+ #include <stdio.h>
+ int main()
+ {
+ 	char ch='w';
+ 	char* pc=&ch;
+ 	*pc='a';
+ 	printf("%c\n";ch)
+ 	return 0;
+ } 
+ //变量是为了存放地址的话，那么这个变量就加做指针变量 
+//c语言关键字：关键字不能自己创建 
+
+//#include <stdio.h>
+//int main()
+//{
+//	printf("%d\n",sizeof(char*));//8
+////	double d=3.14;
+////	double* pd=&d;
+////	printf("%d\n",sizeof(pd));//32位平台上是4个字节，64位平台上是8个字节 
+////	*pd=5.5;
+////	printf("%f\n",d);//d也可以换成 *pd 
+////	int a=10;//申请了4个字节的空间
+////	int* p=&a;//p是一个变量，如果变量是为了存放地址的话，那么这个变量就加做指针变量,p就是指针变量
+////	//printf("%p\n",p); 
+////	//printf("%p\n",&a);
+////	 *p =20;//这里的*是解引用操作符，或者叫间接访问操作符 
+////	 printf("a=%d\,",a);
+//	return 0;
+// } 
+ 
+ //结构体,描述复杂对象,我们自己创造出来的一种类型 
+ //char int double
+ //struct 结构体关键字
+ //创建一个结构体类型 
+// struct Book
+// {
+// 	char name[20];//c语言程序设计
+//	short price;//55 
+//  } ;//这个分号不可缺少，用于结束 
+// #include <stdio.h>
+// #include <string.h>
+// int main()
+// {
+// 	struct Book b1 = {"c语言程序设计",55};//利用结构体类型创建一个该类型的结构体变量出来
+//如果要修改书的名字：   strcpy(b1.name,"C++");//strcpy-string copy-字符串拷贝-库函数-需要引入头文件-string.h 
+// 	struct Book *pb=&b1;//pb就是指针变量
+// 	printf("%s\n",pb->name);
+// 	printf("%d\n",pb->price);
+// 	//.   结构体变量。成员
+//	//->   结构体指针->成员 
+//	//利用pb打印出我的书名和价格
+////	 printf("%s\n",(*pb).name);
+////	 printf("%d\n",(*pb).name); 
+////	 printf("书名:%s\n",b1.name) ;
+////	 printf("价格:%d元\n",b1.price);
+////	b1.price = 15;
+////	printf("修改后的价格:%d\n",b1.price);
+////	 
+// 	return 0;
+//  } 
