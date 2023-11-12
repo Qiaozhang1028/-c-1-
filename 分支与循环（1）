@@ -1,0 +1,181 @@
+//如果要用到scanf这个语句时，要使用scanf_s，这是vs里面特有的
+
+//#include <stdio.h>
+//int main()
+//{
+//	int age = 45;
+//	if (age < 18)
+//		printf("未成年\n");
+//	else
+//	{
+//	  if (age >= 18 && age < 28)
+//		  printf("青年\n");//如果是多条执行语句的话，需要将这多条执行语句加上大括号{ },这叫做代码块
+//	  else if (age >= 28 && age < 50)
+//		  printf("壮年\n");
+//	  else if (age >= 50 && age < 90)
+//		  printf("老年\n");
+//	  else
+//		  printf("老不死\n");
+//	}
+//	/*else if (age >= 18 && age < 28)
+//		printf("青年\n");
+//	else if (age >= 28 && age < 50)
+//		printf("壮年\n");
+//	else if (age >= 50 && age < 90)
+//		printf("老年\n");
+//	else
+//		printf("老不死\n");*/
+//		
+//	return 0;
+//}
+//0表示假，非0表示为真
+//#include <stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int b = 2;
+//	if (a == 1)
+//		if (b == 2)
+//			printf("hehe\n");
+//		else//else和最近的未匹配的if相匹配
+//			printf("haha\n");
+//	return 0;
+//}
+
+
+//一个=叫做赋值，判断相等是==
+//#include <stdio.h>
+//int main()
+//{
+//	int num = 4;
+//	if (5 == num)
+//	{
+//		printf("hehe\n");
+//	}
+//	return 0;
+//}
+
+//判断一个数是否为奇数
+//#include <stdio.h>
+//int main()
+//{
+//	int a;
+//	scanf_s("%d", &a);
+//	if (a%2==0)
+//		printf("偶数\n");
+//	else
+//		printf("奇数\n");
+//	return 0;
+//}
+
+//输出100以内的奇数
+//#include <stdio.h>
+//int main()
+//{
+//	while (i <= 100)
+//	{
+//		if (i % 2 == 1)
+//			printf("%d", i);
+//		i++;
+//
+//	}
+//	return 0;
+//}
+
+
+//#include <stdio.h>
+//int main()
+//{
+//	int i = 1;
+//	while (i <= 100)
+//	{
+//		printf("%d  ", i);
+//		i += 2;
+//	}
+//	
+//	return 0;
+//}
+
+//switch语句,是一种分支语句，常常用于多分支的情况
+//switch（整形表达式）整形表达式的结果是几，就会从case几进去
+//break 直接打破循环
+//编程习惯：在最后一个case后面必须加break
+//#include <stdio.h>
+//int main()
+//{
+//	int day = 0;
+//	scanf_s("%d", &day);//
+//	switch (day)//day一定得是整型
+//	{
+//	case 1:
+//		printf("星期一\n");
+//		break;
+//	case 2:
+//		printf("星期二\n");
+//		break;
+//	case 3:
+//		printf("星期三\n");
+//		break;
+//	case 4:
+//		printf("星期四\n");
+//		break;
+//	case 5:
+//		printf("星期五\n");
+//		break;
+//	case 6:
+//		printf("星期六\n");
+//		break;
+//	case 7:
+//		printf("星期日\n");
+//		break;
+//	default://这里default的作用就是当输入值有误时，会按照下列默认执行
+//		printf("输入错误\n");
+//		break;
+//	}
+//	/*if (1 == day)
+//		printf("星期一\n");
+//	else if (2 == day)
+//		printf("星期二\n");
+//	else if (3 == day)
+//		printf("星期三\n");*/
+//	return 0;
+//}
+//
+//#include <stdio.h>
+//int main()
+//{
+//	int n = 1;
+//	int m = 2;
+//	switch(n)
+//	{
+//	case 1:m++;
+//	case 2:n++;
+//	case 3:
+//		switch (n)
+//	{//switch允许嵌套使用
+//	case 1:n++;
+//	case 2:m++; n++;
+//		break;
+//	}
+//	case 4:m++;
+//		break;
+//	default:
+//		break;
+//	}
+//	printf("m=%d,n=%d\n", m, n);
+//
+//	return 0;
+//}
+//EOF叫做文件结束标志，值为-1
+//while 循环
+#include <stdio.h>
+int main()
+{
+	int i = 1;
+	while (i<=10)
+	{
+		printf("%d ", i);
+		i++;
+	}
+	return 0;
+}
