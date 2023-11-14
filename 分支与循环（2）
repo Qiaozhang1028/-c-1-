@@ -1,0 +1,136 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a, b;
+//	float x, y;
+//	char c1, c2;
+//	scanf("a=%d b=%d",&a,&b);
+//	scanf("%f %f",&x,&y);
+//	scanf("%c%c",&c1,&c2);
+//	printf("a=%d,b=%d,x=%f,y=%f,c1=%c,c2=%c\n",a,b,x,y,c1,c2);
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int b = 2;
+//	if (a == 1)
+//		if (b == 2)
+//			printf("hehe\n");
+//		else
+//			printf("haha\n");
+//
+//
+//	return 0;
+//}
+//#include <stdio.h>
+//void main() {
+//	Queue Q; 
+//	Init Queue(Q);
+//	Char x = 'e'; v = 'c';
+//	EnQueue(Q, 'h');
+//	EnQueue(Q, 'r');
+//	EnQueue(Q, 'v');
+//	DeQueue(Q, x);
+//	EnQueue(Q, x);
+//	DeQueue(Q, x);
+//	EnQueue(Q, 'a');
+//	while (!QueueEmpty(Q)) { DeQueue(Q, y); printf(v); };
+//}
+
+
+//EOF:文件结束标志
+//#include <stdio.h>
+//int main()
+//{
+//	int ch = 0;
+//	while ((ch = getchar()) != EOF)
+//	{
+//		putchar(ch);
+//	}
+//	return 0;
+//}
+
+
+//#include <stdio.h>
+//int main()
+//{
+//	int ret = 0;
+//	int ch = 0;
+//	char password[20] = { 0 };
+//		
+//	printf("请输入密码：>");
+//	scanf("%s", password);//输入密码，并存放在password数组中
+//	 //缓冲区还剩余一个\n,此时就再需要一个getchar来把缓冲区里面的\n给吸收掉
+//	//getchar();
+//	while ((ch = getchar()) != '\n')
+//	{
+//		;
+//	}
+//	printf("请确认（Y/N）：>");
+//	ret=getchar();//Y/N
+//	if (ret == 'Y')
+//	{
+//		printf("确认成功\n");
+//
+//	}
+//	else
+//	{
+//		printf("放弃确认\n");
+//	}
+//
+//	/*printf("%d\n", '\n');*/
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//
+//{
+//	int ch = 0;
+//	while ((ch = getchar()) != EOF)
+//	{
+//		if (ch < '0' || ch>'9')//||的意思为或者
+//			continue;
+//		putchar(ch);
+//	}
+//	return 0;
+//}
+
+
+
+
+//for，while,do...while三种循环
+//for（表达式1初始化；表达式判断；表达式3调整）
+//#include <stdio.h>
+//int main()
+//{
+//	int i = 0;//循环变量的一个初始化
+//	while (i < 10)//判断
+//	{
+//		//...
+//		i++//调整
+//	}
+//
+//
+//	return 0;
+//}
+
+
+//用for循环打印1到10
+#include <stdio.h>
+int main()
+{
+	int i = 0;//初始化判断 
+	for (i = 1; i <= 10; i++)//关于分号；，如果加上分号之后就代表先循环完再输出，不加分号才会进行真正的for循环
+	{
+		printf("%d ", i);
+	}
+	return 0;
+}
