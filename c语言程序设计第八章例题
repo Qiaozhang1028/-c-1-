@@ -1,0 +1,339 @@
+#define _CRT_SECURE_NO_WARNINGS
+
+//#include <stdio.h>
+//int main()
+//{
+//	int a = 100, b = 10;
+//	int* pointer_1, * pointer_2;
+//	pointer_1 = &a;
+//	pointer_2 = &b;
+//	printf("a=%d\nb=%d\n", a, b);
+//	printf("* pointer_1=%d\n* pointer_2=%d", *pointer_1, *pointer_2);
+//
+//		return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int* p1, * p2, * p, a, b;
+//	printf("请输入两个整数\n");
+//	scanf("%d,%d", &a, &b);
+//	p1 = &a;
+//	p2 = &b;
+//	if (a < b)
+//	{
+//		p = p1;
+//		p1 = p2;
+//		p2 = p;
+//	}
+//	printf("a=%d,b=%d\n", a, b);
+//	printf("max = % d, min = % d\n", *p1, *p2);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	void swap(int* p1, int* p2);
+//	int a, b;
+//	int* pointer_1, * pointer_2;
+//	printf("请输入a和b\n");
+//	scanf("%d,%d", &a, &b);
+//	pointer_1 = &a;
+//	pointer_2 = &b;
+//	if (a > b)
+//		swap(pointer_1, pointer_2);
+//	printf("max=%d,min=%d\n", a, b);
+//	return 0;
+//}
+//void swap(int* p1, int* p2)
+//{
+//	int t;
+//	t = *p1;
+//	*p1 = *p2;
+//	*p2 = t;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	void swap(int* p1, int* p2);
+//	int a, b;
+//	int* pointer_1, * pointer_2;
+//	printf("请输入两个数\n");
+//	scanf("%d,%d", &a, &b);
+//	pointer_1 = &a;
+//	pointer_2 = &b;
+//	if (a < b)
+//		swap(pointer_1, pointer_2);
+//	printf("max=%d,min=%d\n", *pointer_1, *pointer_2);
+//	return 0;
+//}
+//void swap(int* p1, int* p2)
+//{
+//	int t;
+//	t = *p1;
+//	*p1 = *p2;
+//	*p2 = t;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	void exchange(int* q1, int* q2, int* q3);
+//	int a, b, c, * p1, * p2, * p3;
+//	printf("输入三个数\n");
+//	scanf("%d,%d,%d", &a, &b, &c);
+//	p1 = &a;
+//	p2 = &b;
+//	p3 = &c;
+//	exchange(p1, p2, p3);
+//	printf("顺序是：%d,%d,%d\n", a, b, c);
+//	return 0;
+//}
+//void exchange(int* q1, int* q2, int* q3)
+//{
+//	void swap(int* pt1, int* pt2);
+//	if (*q1 < *q2)
+//		swap(q1, q2);
+//	if (*q1 < *q3)
+//		swap(q1, q3);
+//	if (*q2 < *q3)
+//		swap(q2, q3);
+//}
+//void swap(int* pt1, int* pt2)
+//{
+//	int t;
+//	t = *pt1;
+//	*pt1 = *pt2;
+//	*pt2 = t;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int a[10];
+//	int i;
+//	printf("请输入十个数\n");
+//	for (i = 0; i < 10; i++)
+//		scanf("%d", &a[i]);
+//	for (i = 0; i < 10; i++)
+//		printf("%d", a[i]);
+//	printf("\n");
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int a[10];
+//	int i;
+//	printf("请输入十个数\n");
+//	for (i = 0; i < 10; i++)
+//		scanf("%d", a[i]);
+//	for (i = 0; i < 10; i++)
+//		printf("%d", *(a + 1));
+//	printf("\n");
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int a[10];
+//	int* p, i;
+//	printf("请输入十个数")；
+//		for(i = 0; i < 10; i++)
+//		scanf("%d", &a[i]);
+//	for (p = a; p < (a + 10); p++)
+//		printf("\n");
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int i, a[10], * p = a;
+//	printf("请输入十个数\n");
+//	for (i = 0; i < 10; i++)
+//		scanf("%d", p++);
+//	p = a;
+//	for (i = 0; i < 10; i++, p++);
+//	printf("%d", *p);
+//	printf("\n");
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	void inv(int x[], int n);
+//	int i, a[10] = { 3,7,9,11,0,6,7,5,4,2 };
+//	printf("原始顺序是：");
+//	for (i = 0; i < 10; i++)
+//		printf("%d", a[i]);
+//	printf("\n");
+//	inv(a, 10);
+//	printf("现在的顺序是：");
+//	for (i = 0; i < 10; i++)
+//		printf("%d", a[i]);
+//	printf("\n");
+//
+//	return 0;
+//}
+//void inv(int x[], int n)
+//{
+//	int t, i, j, m = (n - 1) / 2;
+//	for (i = 0; i <= m; i++)
+//	{
+//		j = n - 1 - i;
+//		t = x[i];
+//		x[i] = x[j];
+//		x[j] = t;
+//	}
+//	//return;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	void inv(int* x, int n);
+//	int i, arr[10], * p = arr;
+//	printf("原始顺序是：");
+//	for (i = 0; i < 10; i++, p++)
+//		scanf("%d", *p);
+//	printf("\n");
+//	p = arr;
+//	inv(p, 10);
+//	printf("现在的顺序是:")；
+//		for (p = arr; p < arr + 10; p++)
+//			printf("%d", *p);
+//	printf("\n");
+//	return 0;
+//}
+//void inv(int* x, int n)
+//{
+//	int* p, m, t, * i, * j;
+//	m = (n - 1) / 2;
+//	i = x;
+//	j = x + n - 1;
+//	p = x + m;
+//	for (; i <= p; i++, j--)
+//	{
+//		t = *i;
+//		*i = *j;
+//		*j = temp;
+//	}
+//	return;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	void sort(int x[], int n);
+//	int i, * p, a[10];
+//	p = a;
+//	printf("请输入十个数：");
+//	for (i = 0; i < 10; i++)
+//		scanf("%d", p++);
+//	p = a;
+//	sort(p, 10);
+//	for (p = a, i = 0; i < 10; i++)
+//	{
+//		printf(" %d", *p);
+//		p++;
+//	}
+//	printf("\n");
+//
+//	return 0;
+//}
+//void sort(int x[], int n)
+//{
+//	int i, j, k, t;
+//	for (i = 0; i < n - 1; i++)
+//	{
+//		k = i;
+//		for (j = i + 1; j < n; j++)
+//			if (x[j] > x[k])
+//				k = j;
+//		if (k != i)
+//		{
+//			t = x[i];
+//			x[i] = x[k];
+//			x[k] = t;
+//		}
+//	}
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	char *string ="hahah";
+//	printf("%s\n", string);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	char a[] = "hahha", b[20];
+//	int i;
+//	for (i = 0; *(a + i) != '\0'; i++)
+//		*(b + i) = *(a + i);
+//	*(b + i) = '\0';
+//	printf("string a is:%s\n", a);
+//	printf("string b is:");
+//	for (i = 0; b[i] != '\0'; i++)
+//		printf("%c", b[i]);
+//	printf("\n");
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	char a[] = "hahaha", b[20], *p1, *p2;
+//	p1 = a;
+//	p2 = b;
+//	for (; *p1 != '\0'; p1++, p2++)
+//		*p2 = *p1;
+//	*p2 = '\0';
+//	printf("string a is:%s\n", a);
+//	printf("string b is:%s\n", b);
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	void copy_string(char from[], char to[]);
+//	char a[] = "aaaaaa";
+//	char b[] = "bbbbbb";
+//		printf("string a=%s\nstring b=%s\n", a, b);
+//	printf("copy string a to string b:\n");
+//	copy_string(a, b);
+//	printf("\nstring a=%s\nstring b=%s\n", a, b);
+//	return 0;
+//}
+//void copy_string(char from[], char to[])
+//{
+//	int i = 0;
+//	while (from[i] != '\0')
+//	{
+//		to[i] = from[i];
+//		i++;
+//	}
+//	to[i] = '\0';
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	char * a = "I love China";
+//	a = a + 7;
+//	printf("%s\n", a);
+//	return 0;
+//}
+
